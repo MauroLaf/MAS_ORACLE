@@ -1,0 +1,12 @@
+***** Los formatos TO_char estan en la pagina 104 de
+https://docs.oracle.com/cd/F32587_01/sqlrf/sql-language-reference.pdf#page=2058
+***** Para configurar el cmd al lenguaje ESPAÑOL
+SET NLS_LANG=SPANISH_SPAIN.WEBMSWIN1252
+SET NLS_LANG=AMERICAN_AMERICA.WE8MSWIN1252
+
+
+ALTER SESSION SET CONTAINER=XEPDB1
+******** cambiar juego de caracteres al ingresar a la CMD antes de SQL
+chcp 1252
+*****Para saber los parametros de tu consola
+SELECT * FROM NLS_SESSION_PARAMETERS;

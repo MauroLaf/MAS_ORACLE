@@ -1,0 +1,11 @@
+-Abrir herramienta CASE "Oracle developer data modeler"
+-Archivo/Importar/Diccionario de datos
+-Agregar: Name…		o sys en caso de adm (en este caso agregar rol de sysdba)
+	  Usuario...	
+	  Contraseña...
+	  Nombre del servicio:XEPDB1
+-Probar/Guardar
+-Siguiente/Seleccionar la BD/siguiente
+-Seleccionar las tablas a importar y siguiente/Terminar
+-Saldrá el esquema relacional
+-Realizar la ingeniería inversa para ver el esquema lógico 

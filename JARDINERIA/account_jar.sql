@@ -1,0 +1,34 @@
+/*
+01 Create Account
+Create accounts for JARDINERIA schema
+Run this as either SYS or SYSTEM.
+*/
+
+
+/*
+Set the pluggable database if you're running this on Oracle v12 or later.
+*/
+ALTER SESSION SET CONTAINER = XEPDB1;
+
+/*
+If the above PDB name does not work, some options for PDB names are:
+ALTER SESSION SET CONTAINER = XEPDB1;
+ALTER SESSION SET CONTAINER = XPEDB1;
+*/
+
+/*
+Drop the HR account and all objects to reset.
+Then, create the user and give it the permissions.
+*/
+DROP USER JARDINERIA CASCADE;
+
+CREATE USER JARDINERIA IDENTIFIED BY JARDINERIA;
+
+ALTER USER HR DEFAULT TABLESPACE users QUOTA UNLIMITED ON users;
+
+ALTER USER HR TEMPORARY TABLESPACE TEMP;
+
+GRANT CONNECT TO JARDINERIA;
+
+GRANT CREATE SESSION, CREATE VIEW, CREATE TABLE, ALTER SESSION, CREATE SEQUENCE TO JARDINERIA;
+GRANT CREATE SYNONYM, CREATE DATABASE LINK, RESOURCE, UNLIMITED TABLESPACE TO JARDINERIA;
